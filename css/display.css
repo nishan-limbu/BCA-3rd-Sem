@@ -1,0 +1,19 @@
+/* css for the text of anchor tag (<a></a>) the 'Add Tasks' button whose id="add_task"*/
+#add_task{
+  color:white;
+  
+}
+
+/* css for the button 'Add Task' whose id="button_add" */
+#button_add{
+  color:white;
+  margin-left: 684px;
+  margin-top: -52px;
+}
+
+/* css for the input tag for a search bar whose id="searchInput" */
+#searchInput{
+  width: 28%;
+  margin-top: -52px;
+  margin-left: 797px;
+}
