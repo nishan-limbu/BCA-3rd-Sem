@@ -10,8 +10,9 @@ int flag;
 //Helper function
 float findSum(int i,float a[][n+1])
 {
+	int j;
      float sum=0;
-     for(int j=0;j<n;j++)
+     for(j=0;j<n;j++)
      {  
        if(i!=j)  
          sum+=a[i][j];
@@ -22,9 +23,10 @@ float findSum(int i,float a[][n+1])
 //checks if Gauss Jacobi Method is applicable and return true if yes otherwise return false
 bool isMethodApplicable(float a[][n+1]) 
 {
-   for(int i=0;i<n;i++)
+	int i, j;
+   for(i=0;i<n;i++)
    {
-       for(int j=0;j<n;j++)
+       for(j=0;j<n;j++)
        {
 
            if(fabs(a[i][i])>findSum(i,a))
@@ -40,8 +42,9 @@ bool isMethodApplicable(float a[][n+1])
 //prints the Value of Unknowns
 void print(int iteration,float values[n]) 
 {
+	int i;
   printf("Iteration %d ",iteration);  
-  for(int i=0;i<n;i++)
+  for(i=0;i<n;i++)
     printf("value[%d]=%f ",i+1,values[i]);
   printf("\n");
 }
@@ -112,9 +115,9 @@ int main()
     float values[n];
 
     printf("Enter the Augmented Matrix\n");
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
-     for(int j=0;j<n+1;j++)
+     for(j=0;j<n+1;j++)
         scanf("%f",&a[i][j]);
     }
 
@@ -124,7 +127,7 @@ int main()
         return 0;
    }
    printf("Gauss Jacobi Method is applicable\n");
-   for(int i=0;i<n;i++)
+   for(i=0;i<n;i++)
      values[i]=0;
    findValues(a,maxIterations,values);
    return 0;

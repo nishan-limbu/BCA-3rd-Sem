@@ -1,11 +1,13 @@
 #include <stdio.h>
 
 // Function for calculating the coefficients of the best-fit line using the least squares method
-void calculateBestFitLine(float x[], float y[], int n, float* slope, float* intercept) {
+void calculateBestFitLine(float x[], float y[], int n, float* slope, float* intercept) 
+{
     float sumX = 0, sumY = 0, sumXY = 0, sumX2 = 0;
+    int i;
 
     // Calculating the required summations
-    for (int i = 0; i < n; i++) {
+    for (i = 0; i < n; i++) {
         sumX += x[i];
         sumY += y[i];
         sumXY += x[i] * y[i];

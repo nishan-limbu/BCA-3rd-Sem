@@ -65,9 +65,9 @@ int main()
     scanf("%d",&n);
     float a[n][n+1],value[n];
     printf("Enter the Augmented Matrix\n");
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
-     for(int j=0;j<n+1;j++)
+     for(j=0;j<n+1;j++)
         scanf("%f",&a[i][j]);
     }
     convertToUpperTriangular(a,n);

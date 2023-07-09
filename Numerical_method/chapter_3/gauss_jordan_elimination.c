@@ -2,9 +2,11 @@
 
 #define MAX_SIZE 10
 
-void printMatrix(float matrix[MAX_SIZE][MAX_SIZE+1], int size) {
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j <= size; j++) {
+void printMatrix(float matrix[MAX_SIZE][MAX_SIZE+1], int size) 
+{
+	int i, j;
+    for (i = 0; i < size; i++) {
+        for (j = 0; j <= size; j++) {
             printf("%.2f\t", matrix[i][j]);
         }
         printf("\n");
@@ -12,21 +14,23 @@ void printMatrix(float matrix[MAX_SIZE][MAX_SIZE+1], int size) {
     printf("\n");
 }
 
-void gaussJordan(float matrix[MAX_SIZE][MAX_SIZE+1], int size) {
-    for (int i = 0; i < size; i++) {
+void gaussJordan(float matrix[MAX_SIZE][MAX_SIZE+1], int size) 
+{
+	int i, j, k;
+    for (i = 0; i < size; i++) {
         // Pivot element
         float pivot = matrix[i][i];
 
         // Divide the pivot row by the pivot element
-        for (int j = i; j <= size; j++) {
+        for (j = i; j <= size; j++) {
             matrix[i][j] /= pivot;
         }
 
         // Elimination
-        for (int j = 0; j < size; j++) {
+        for (j = 0; j < size; j++) {
             if (j != i) {
                 float factor = matrix[j][i];
-                for (int k = i; k <= size; k++) {
+                for (k = i; k <= size; k++) {
                     matrix[j][k] -= factor * matrix[i][k];
                 }
             }
@@ -34,8 +38,9 @@ void gaussJordan(float matrix[MAX_SIZE][MAX_SIZE+1], int size) {
     }
 }
 
-int main() {
-    int size;
+int main() 
+{
+    int i, j, size;
 
     printf("Enter the number of equations: ");
     scanf("%d", &size);
@@ -43,8 +48,8 @@ int main() {
     float matrix[MAX_SIZE][MAX_SIZE+1];
 
     printf("Enter the augmented matrix coefficients:\n");
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j <= size; j++) {
+    for (i = 0; i < size; i++) {
+        for (j = 0; j <= size; j++) {
             scanf("%f", &matrix[i][j]);
         }
     }
@@ -56,7 +61,7 @@ int main() {
     gaussJordan(matrix, size);
 
     printf("Solution:\n");
-    for (int i = 0; i < size; i++) {
+    for (i = 0; i < size; i++) {
         printf("x%d = %.2f\n", i + 1, matrix[i][size]);
     }
 
