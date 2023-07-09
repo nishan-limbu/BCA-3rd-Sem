@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Math Operation</title>
+
+    <!-- css from bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="card" style="width: 25rem;left: 29rem;top:5rem;border-top-right-radius: 79px;border-bottom-left-radius: 79px;background-color: #80808000;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <h3 style="margin-left: 19px;margin-top: 15px;margin-bottom: 29px;color: #00a8df;"><b>Math Operation</b></h3>
+        <div class="form-group mb-2">
+            <div class="form-group" style="margin-left: 20px;margin-right: 20px;color: #00a8df;">
+                <label for="num1"><b>Enter the first number:</b> </label>
+            <input type="text" class="form-control" id="num1" placeholder="Number-1" style="border-radius: 20px;">
+            </div>
+            <div class="form-group" style="margin-left: 20px;margin-right: 20px;">
+                <label for="num2" style="color: #00a8df;"><b>Enter the second number:</b> </label>
+            <input type="text" class="form-control" name="num2" id="num2" placeholder="Number -2" style="border-radius: 20px;">
+            </div>
+        </div>
+        <div class="btn" style="margin-left: 20px;margin-right: 20px;">
+            <button class="btn btn-outline-info mb-2" onclick="addition(event)" style="border-radius: 20px;">Add</button>
+            <button class="btn btn-outline-info mb-2" onclick="subtraction()" style="border-radius: 20px;">subtract</button>
+            <button class="btn btn-outline-info mb-2" onclick="multiplication()" style="border-radius: 20px;">Multiply</button><br>
+            <button class="btn btn-outline-info mb-2" onclick="division()" style="border-radius: 20px;">Divide</button>
+            <button class="btn btn-outline-info mb-2" onclick="remainder()" style="border-radius: 20px;">Remainder</button>
+            <button class="btn btn-outline-info mb-2" onclick="square()" style="border-radius: 20px;">Square</button>
+            <button class="btn btn-outline-info mb-2"onclick="cube()" style="border-radius: 20px;">cube</button>
+        </div>
+        <div class="form-group" style="margin-left: 20px;margin-right: 20px;">
+            <textarea class="form-control" id="result" rows="3" style="border-radius: 20px;margin-bottom: 26px;"></textarea>
+          </div>
+      </div>
+    
+    
+    <!-- bootstrap / js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+<script>
+
+    function addition(){
+        var num1 = Number(document.getElementById('num1').value);
+        var num2 = Number(document.getElementById('num2').value);
+        document.getElementById('result').innerText = "Addition: "+num1+num2;
+    }
+    function subtraction(){
+        var num1 = Number(document.getElementById('num1').value);
+        var num2 = Number(document.getElementById('num2').value);
+        document.getElementById('result').innerHTML = "Subtraction: "+(num1-num2);
+    }
+    function multiplication(){
+        var num1 = Number(document.getElementById('num1').value);
+        var num2 = Number(document.getElementById('num2').value);
+        document.getElementById('result').innerHTML = "Multiplication: "+num1*num2;
+    }
+    function division(){
+        var num1 = Number(document.getElementById('num1').value);
+        var num2 = Number(document.getElementById('num2').value);
+        document.getElementById('result').innerHTML = "Division: "+num1/num2;
+    }
+    function remainder(){
+        var num1 = Number(document.getElementById('num1').value);
+        var num2 = Number(document.getElementById('num2').value);
+        document.getElementById('result').innerHTML = "Remainder: "+num1%num2;
+    }
+    function square(){
+        var num1 = Number(document.getElementById('num1').value);
+        var num2 = Number(document.getElementById('num2').value);
+        document.getElementById('result').innerHTML = "Square of num-1: "+num1*num1;
+    }
+    function cube(){
+        var num1 = Number(document.getElementById('num1').value);
+        var num2 = Number(document.getElementById('num2').value);
+        document.getElementById('result').innerHTML = "Cube of num-1: "+num1*num1*num1;
+    }
+</script>
+</html>
