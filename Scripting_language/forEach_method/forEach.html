@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <title>forEach()</title>
+</head>
+<body>
+    <script>
+        var students = [
+            {
+                "Name": "Nishan Limbu",
+                "Class": "BCA 4th Semester",
+                "Address": "Dhankuta"
+            },
+            {
+                "Name": "Dipa Limbu",
+                "Class": "BCA 4th Semester",
+                "Address": "Taplajung"
+            },
+            {
+                "Name": "Misamhan Hang Limbu",
+                "Class": "BCA 4th Semester",
+                "Address": "Bhojpur"
+            },
+            {
+                "Name": "Numa Limbu",
+                "Class": "BCA 4th Semester",
+                "Address": "Bhaktapur"
+            },
+            {
+                "Name": "Tangsanf Limbu",
+                "Class": "BCA 4th Semester",
+                "Address": "Dharan"
+            },
+            {
+                "Name": "Nunam Limbu",
+                "Class": "BCA 4th Semester",
+                "Address": "Bhojpur"
+            },
+            {
+                "Name": "Kunjan Khattri",
+                "Class": "BCA 4th Semester",
+                "Address": "Kathmandu"
+            },
+        ]
+
+        students.forEach((student, index)=>{
+            var output = {
+                "index": index,
+                "Name" : student.Name,
+                "Class": student.Class,
+                "Address": student.Address
+            }
+            console.log(output)
+        })
+    </script>
+</body>
+</html>
